@@ -1,8 +1,12 @@
 # 🎭 Voice Shapeshifter
 
-> **Transform any text into speech with multiple voices, emotions, and styles!**
+> **Zmień tekst w głos z szalonymi efektami! Pijany głos, robot, wiewiórka i więcej!**
 
-A fun voice synthesis project created during a late-night coding session with Claude AI and Monica. Uses Microsoft Edge's neural TTS engine to create various voice effects and personalities.
+Projekt stworzony podczas nocnej sesji kodowania z Claude AI i Moniką. Używa darmowego Microsoft Edge TTS do tworzenia różnych efektów głosowych.
+
+## 🎬 ZOBACZ DEMO (kliknij obrazek)
+[![Voice Shapeshifter Demo](https://img.youtube.com/vi/dQw4w9WgXcQ/0.jpg)](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
+*(wkrótce prawdziwe demo!)*
 
 ## ✨ Features
 
@@ -13,40 +17,99 @@ A fun voice synthesis project created during a late-night coding session with Cl
 - 🎵 **Batch Generation** - Create multiple variations at once
 - 💾 **Export to MP3** - Save your creations
 
-## 🚀 Quick Start
+## 🚀 JAK URUCHOMIĆ (dla totalnych początkujących!)
 
+### Krok 1: Sprawdź czy masz Pythona
+Otwórz terminal (Mac/Linux) lub Command Prompt (Windows) i wpisz:
 ```bash
-# Clone the repo
-git clone https://github.com/yourusername/voice-shapeshifter.git
+python --version
+```
+Jeśli nie masz, pobierz z [python.org](https://python.org) (wybierz wersję 3.8 lub nowszą)
+
+### Krok 2: Pobierz projekt
+```bash
+# Opcja A: Jeśli masz git
+git clone https://github.com/m-szymanska/voice-shapeshifter.git
+
+# Opcja B: Jeśli NIE masz git - po prostu:
+# 1. Kliknij zielony przycisk "Code" na stronie projektu
+# 2. Wybierz "Download ZIP"
+# 3. Rozpakuj gdzie chcesz
+```
+
+### Krok 3: Wejdź do folderu projektu
+```bash
 cd voice-shapeshifter
-
-# Setup (one time only)
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-pip install edge-tts pygame
-
-# Run demos
-python generate_demo_voices.py    # Generate sample voices
-python voice_reader.py           # Interactive text reader
-python simple_tts_demo.py        # Full demo with all features
 ```
 
-## 🎯 Usage Examples
-
-### Generate a simple greeting
-```python
-python demo_claude_monica.py
-```
-This creates 6 variations of "Cześć, jestem głosem który powstał dzięki Claude i Monice!"
-
-### Read any text with any voice
+### Krok 4: Zainstaluj wszystko (tylko raz!)
 ```bash
+# Windows:
+python -m venv venv
+venv\Scripts\activate
+pip install -r requirements_simple.txt
+
+# Mac/Linux:
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements_simple.txt
+```
+
+### Krok 5: URUCHOM APLIKACJĘ! 🎉
+```bash
+python web_app.py
+```
+
+**Otworzy się przeglądarka z aplikacją na http://localhost:7860**
+
+### 🆘 Jeśli coś nie działa:
+
+**Problem: "python nie jest rozpoznawane"**
+- Zainstaluj Python z python.org
+- Na Windows: podczas instalacji zaznacz "Add Python to PATH"
+
+**Problem: "No module named 'edge_tts'"**
+- Upewnij się że aktywowałeś venv (powinno być (venv) na początku linii)
+- Spróbuj: `pip install edge-tts pygame gradio`
+
+**Problem: "Port 7860 zajęty"**
+- Zamknij inne aplikacje lub zmień port w web_app.py
+
+## 🎯 JAK UŻYWAĆ APLIKACJI
+
+### Po uruchomieniu web_app.py:
+
+1. **🎯 Podstawowy Generator**
+   - Wpisz dowolny tekst
+   - Wybierz głos (np. Marek, Zofia)
+   - Wybierz styl (np. Robot, Wiewiórka)
+   - Kliknij "Generuj głos!"
+
+2. **🍺 Drunk Mode (Tryb Pijany)**
+   - Wpisz długi tekst
+   - Kliknij "Upij głos!"
+   - Głos stopniowo się upija od trzeźwego do totalnie pijanego!
+
+3. **🔄 Reverse Psychology**
+   - Wpisz tekst z pozytywnymi słowami (np. "Kocham poniedziałki!")
+   - Dostaniesz 2 wersje:
+     - Ironicznie szczęśliwą 😊
+     - Prawdziwie smutną 😢
+
+4. **🎲 Losowy Szał**
+   - Kliknij "Losuj wszystko!"
+   - Aplikacja wybierze losowy głos i styl
+
+### Inne skrypty (dla zaawansowanych):
+```bash
+# Wygeneruj przykładowe głosy
+python generate_demo_voices.py
+
+# Interaktywny czytacz tekstów
 python voice_reader.py
-# Then follow the prompts to:
-# 1. Enter your text
-# 2. Choose a voice (1-12)
-# 3. Choose a style (1-9)
-# 4. Listen and optionally save
+
+# Testuj szalone tryby
+python crazy_modes.py
 ```
 
 ### Available Voices
@@ -134,14 +197,36 @@ Feel free to fork, modify, and create pull requests! Some ideas:
 
 MIT License - Use it however you want!
 
+## 🤔 FAQ (Często Zadawane Pytania)
+
+**P: Czy to jest darmowe?**
+O: TAK! 100% darmowe. Edge TTS nie wymaga żadnych opłat ani API key.
+
+**P: Czy mogę użyć wygenerowanych głosów komercyjnie?**
+O: Sprawdź warunki użytkowania Microsoft Edge TTS. Kod projektu jest na licencji MIT.
+
+**P: Dlaczego niektóre głosy źle czytają polski tekst?**
+O: Używaj polskich głosów (Marek, Zofia) dla polskiego tekstu. Angielskie głosy nie znają polskiej wymowy.
+
+**P: Mogę dodać własny głos?**
+O: Edge TTS nie obsługuje klonowania głosu. Możesz tylko wybierać z dostępnych głosów.
+
+**P: Działa offline?**
+O: NIE. Edge TTS wymaga połączenia z internetem.
+
+**P: Mogę to uruchomić na telefonie?**
+O: Teoretycznie tak (jeśli masz Python na telefonie), ale łatwiej użyć na komputerze.
+
 ## 🙏 Credits
 
 Created with ❤️ during a fun coding session between:
-- **Claude** (Anthropic's AI assistant)
-- **Monica** (The human with crazy ideas)
+- **Claude** (Anthropic's AI assistant) 
+- **Monika** (The human with crazy ideas)
 
 Special thanks to Microsoft for the amazing Edge TTS engine!
 
 ---
 
 *"Cześć, jestem głosem który powstał dzięki Claude i Monice, witam serdecznie!"* 🎭
+
+**⭐ Jeśli podoba Ci się projekt, zostaw gwiazdkę na GitHubie! ⭐**
