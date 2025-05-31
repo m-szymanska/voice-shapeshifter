@@ -1,0 +1,11 @@
+gradio
+numpy
+scipy
+librosa
+soundfile
+audiofile
+mlx
+mlx-lm
+huggingface-hub
+sentencepiece
+transformers

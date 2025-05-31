@@ -1,0 +1,34 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+.venv
+
+# Audio outputs
+output/*.mp3
+output/*.wav
+temp_*.mp3
+temp_*.wav
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# Logs
+*.log
+
+# Config
+config-user.json
+
+# Temporary
+tmp/
+temp/
+.cache/
