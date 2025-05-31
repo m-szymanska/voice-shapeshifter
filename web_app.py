@@ -257,7 +257,8 @@ with gr.Blocks(title="🎭 Voice Shapeshifter", theme=gr.themes.Soft()) as app:
     ### 💙 Credits
     Stworzone z miłością przez **Claude** (AI) i **Monikę** (człowiek) podczas spontanicznej sesji kodowania!
     
-    [GitHub](https://github.com/m-szymanska/voice-shapeshifter) | 
+    **GitHub:** https://github.com/m-szymanska/voice-shapeshifter
+    
     *"Cześć, jestem głosem który powstał dzięki Claude i Monice!"* 🎭
     """)
 
